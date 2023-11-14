@@ -9,13 +9,6 @@ const TIMEZONE = "Asia/Jakarta";
 
 moment.tz.setDefault(TIMEZONE);
 
-// sorted please :p
-const defaultMeetups = [
-  moment("2023-10-30"), // test before current time
-  moment("2023-11-17"),
-  moment("2023-12-30"),
-];
-
 const TOKEN = process.env.DISCORD_TOKEN;
 
 // const CLIENT_ID = "1173646712775127040";
@@ -29,6 +22,12 @@ client.once(Events.ClientReady, (c) => {
   let scheduledMessage = new cron.CronJob(
     "00 00 08 * * *",
     () => {
+      // sorted please :p
+      const defaultMeetups = [
+        moment("2023-10-30"), // test before current time
+        moment("2023-11-17"),
+        moment("2023-12-30"),
+      ];
       const guild = client.guilds.cache.get("1117145504925626390");
       const channel = guild.channels.cache.get("1173660009016590437");
 
