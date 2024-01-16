@@ -27,6 +27,7 @@ client.once(Events.ClientReady, (c) => {
         moment("2023-10-30"), // test before current time
         moment("2023-11-17"),
         moment("2023-12-30"),
+        moment("2024-02-24"),
       ];
       const guild = client.guilds.cache.get("1117145504925626390");
       const channel = guild.channels.cache.get("1173660009016590437");
