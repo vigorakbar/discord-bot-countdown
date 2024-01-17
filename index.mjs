@@ -20,7 +20,7 @@ client.once(Events.ClientReady, (c) => {
 
   // TODO: adjust cron time
   let scheduledMessage = new cron.CronJob(
-    "00 32 22 * * *",
+    "00 00 08 * * *",
     () => {
       // sorted please :p
       const defaultMeetups = [
